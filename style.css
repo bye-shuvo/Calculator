@@ -1,0 +1,188 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&family=Teko:wght@300..700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    background-color: rgb(38, 43, 47);
+}
+
+.text{
+    font-size: 5vw;
+    font-family: "Rubik Scribble", system-ui;
+    margin:0 5vw 0 3vw;
+    color: rgb(255, 149, 0);
+    font-weight: bolder;
+}
+
+.frame{
+    height: 40rem;
+    width: 25rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 30px -3px rgb(202, 222, 255);
+    border-radius: 40px;
+    flex-direction: column;
+    font-size: 10px;
+    gap: 5vh;
+    margin:0 3vw 0 5vw;
+    background-color: rgb(50, 50, 50);
+    padding-top: 1.5em;
+}
+
+.top{
+    height: 30%;
+    width: 90%;
+    border-radius: 1rem;
+    margin-top: 2rem;
+    background-color: rgb(116, 127, 136);
+    box-shadow: inset 0 0 30px 20px rgb(84, 92, 98);
+    border: 5px solid rgb(64, 70, 75);
+    font-family: "Teko", sans-serif;
+    font-size: 5em;
+    display: flex;
+    justify-content:flex-end;
+    align-items: last baseline;
+    padding: 10px 10px 0 10px;
+    overflow-x: scroll;
+}
+
+.bottom{
+    height: 70%;
+    width: 90%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    font-size: 4em;
+    font-family: "Teko", sans-serif;
+    gap: 5vh;
+    margin-bottom: 1.5rem;
+}
+
+.mini_dis{
+    margin-left: 4rem;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 10%;
+    width: 100%;
+    gap: 1rem;
+}
+
+#display{
+    margin-right: 5px;
+    height: 110%;
+    width: 8rem;
+    border: 4px solid rgb(64, 70, 75);
+    border-radius: 5px ;
+    background-color: rgb(116, 127, 136);
+    box-shadow: inset 0 0 10px 5px rgb(84, 92, 98);
+}
+
+.mini_dis .opitem{
+    height: 4rem;
+    width: 4rem;
+    background-color: aqua;
+}
+
+.bottom_num{
+    display: flex;
+    flex-direction: row-reverse;
+    gap: 10px;
+}
+
+.number{
+    display: grid;
+    grid-template-columns: repeat(3,4rem);
+    grid-template-rows: repeat(4,4rem);
+    gap: 1rem;
+}
+
+.operator{
+    display: grid;
+    grid-template-rows: repeat(4,4rem);
+    grid-template-columns: repeat(1,4rem);
+    gap: 1rem;
+}
+
+.numitem{
+    background: rgb(227, 235, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 30px 0px rgb(43, 45, 49);
+}
+
+.numitem:hover{
+    cursor: pointer;
+    box-shadow: inset 0px 0px 30px 2px rgb(146, 170, 188);
+
+}
+
+.opitem{
+    background: rgb(226, 234, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: inset 0px 0px 30px 0px rgb(43, 45, 49);
+}
+
+.opitem:hover{
+    cursor: pointer;
+    box-shadow: 0px 0px 30px 5px rgb(68, 84, 95);
+}
+
+.number .opitem{
+    background-color:orange;
+    box-shadow: inset 0px 0px 30px 0px rgba(146, 146, 146, 0.775);
+}
+
+.number .opitem:hover{
+    box-shadow: 0px 0px 30px 5px rgb(68, 84, 95);
+}
+
+@media screen and (max-width: 920px){
+    .container{
+        flex-wrap: wrap;
+        flex-direction: column-reverse;
+    }
+    .text{
+        margin-top: 3vh;
+        font-size: 3rem;
+        transition: all 1s ease-in-out;
+    }
+    .frame{
+        height: 34rem;
+        width: 20rem;
+    }
+
+    #display{
+        width:6rem;
+    }
+
+    .number{
+        grid-template-columns: repeat(3,3rem);
+        grid-template-rows: repeat(4,3rem);
+    }
+    .operator{
+        grid-template-rows: repeat(4,3rem);
+        grid-template-columns: repeat(1,3rem);
+    }
+    .mini_dis .opitem{
+        height: 3rem;
+        width: 3rem;
+        font-size: 2.1rem;
+    }
+}
